@@ -17,11 +17,85 @@ h1 {
   border: 2px solid #ddd;
   border-radius: 8px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  min-height: 100px;
+  margin-bottom: 1rem; /* Reduced margin for WPM control */
+  min-height: 180px; /* NEW: Fixed height to accommodate 3-word context */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* NEW: WPM Control styling */
+#wpm-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background-color: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+#wpm-control label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  min-width: 45px;
+}
+
+#wpm-slider {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: #ddd;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+#wpm-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0078d4;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#wpm-slider::-webkit-slider-thumb:hover {
+  background: #005a9e;
+}
+
+#wpm-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0078d4;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+}
+
+#wpm-slider::-moz-range-thumb:hover {
+  background: #005a9e;
+}
+
+#wpm-input {
+  width: 70px;
+  padding: 6px 8px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  background-color: white;
+}
+
+#wpm-input:focus {
+  outline: none;
+  border-color: #0078d4;
 }
 
 #display-text {
@@ -32,6 +106,7 @@ h1 {
   line-height: 1.5;
 }
 
+/* NEW: Styles for different display states */
 #display-text.processing {
   color: #0078d4;
   font-weight: 500;
@@ -45,6 +120,53 @@ h1 {
 #display-text.success {
   color: #28a745;
   font-weight: 500;
+}
+
+/* NEW: Style for displaying words during reading */
+#display-text.word-display {
+  color: #000;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0;
+  width: 100%;
+}
+
+/* NEW: Container for three-word context display */
+.word-context-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+/* NEW: Previous word styling */
+.word-previous {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.4;
+  letter-spacing: 0.01em;
+}
+
+/* NEW: Current word styling (main focus) */
+.word-current {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  opacity: 1;
+  letter-spacing: 0.02em;
+}
+
+/* NEW: Next word styling */
+.word-next {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.4;
+  letter-spacing: 0.01em;
 }
 
 button {
@@ -67,6 +189,11 @@ button:active {
   background-color: #004578;
 }
 
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 #select-button {
   background-color: #28a745;
 }
@@ -77,4 +204,22 @@ button:active {
 
 #select-button:active {
   background-color: #1e7e34;
+}
+
+/* NEW: Refresh button styling */
+#refresh-button {
+  background-color: #28a745;
+}
+
+#refresh-button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+#refresh-button:active:not(:disabled) {
+  background-color: #1e7e34;
+}
+
+/* NEW: Replay button styling */
+#replay-button {
+  background-color: #0078d4;
 }
