@@ -21,8 +21,8 @@ DEBUG STYLES
   background-color: rgba(0, 0, 255, 0.3) !important;
   border: 2px solid blue !important;
 } */
-/*
-#wpm-input {
+
+/* #wpm-input {
   background-color: rgba(0, 0, 255, 0.3) !important;
   border: 2px solid blue !important;
 } */
@@ -178,21 +178,21 @@ img {
 #wpm-control {
   position: absolute;
   top: 308px;
-  left: 18px;
+  left: 24px;
   width: 380px;
   /* height: 56px; */
   z-index: 5;
 
   display: flex;
   flex-direction: column;
-  justify-content: right;
+  /* justify-content: right; */
 }
 
 /* Custom styled range slider */
 #wpm-slider {
   flex: 1;
   height: 6px;
-  width: 380px;
+  width: 368px;
   background: transparent;
   outline: none;
   -webkit-appearance: none;
@@ -226,17 +226,18 @@ img {
 
 /* WPM Number Input */
 #wpm-input {
-  width: 66px;
+  width: 52px;
   height: 28px;
-  padding: 12px;
+  padding: 0;
   border: 0px solid #999;
-  margin: 0 0 0 4px;
+  margin: 8px 0 0 4px;
   border-radius: 3px;
   font-size: 12px;
   font-weight: 700;
   text-align: center;
   color: #333;
-  background-color: #fff;
+  background-color: #d1dfe7;
+  border-radius: 0;
 
   font-family: 'Press Start 2P', monospace; /* ← Add this */
   letter-spacing: 1px; /* ← Optional: better spacing */

@@ -8,6 +8,7 @@
     <script defer src="ui/display.js"></script>
     <script defer src="ui/controls.js"></script>
     <script defer src="render.js"></script>
+    <script defer src="../shared/constants.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Read-23</title>
@@ -15,7 +16,7 @@
   <body>
     <div id="app-container">
 
-      <img src="assets/background_prototype.png" alt="background" id="background-image" class="pixel-art">
+      <img src="assets/background_reversed.png" alt="background" id="background-image" class="pixel-art">
 
       <!-- ======================================================================================
           CUSTOM TITLEBAR
@@ -42,8 +43,8 @@
           WPM CONTROL SLIDER
       ======================================================================================= -->
       <div id="wpm-control">
-        <input type="range" id="wpm-slider" min="100" max="600" value="300" step="10">
-        <input type="number" id="wpm-input" min="100" max="600" value="300" step="10">
+        <input type="range" id="wpm-slider" min="100" max="600" value="250" step="10">
+        <input type="number" id="wpm-input" min="100" max="600" value="250" step="10">
       </div>
 
       <!-- ======================================================================================

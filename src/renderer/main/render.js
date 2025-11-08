@@ -9,7 +9,7 @@ let currentParagraphIndex = 0;
 let currentLineIndex = 0;
 let currentWordIndex = 0;
 let readingInterval = null;
-let wordsPerMinute = 300; // Default WPM (adjustable in code for now)
+let wordsPerMinute = 250; // Default WPM (adjustable in code for now)
 
 // Get word at specific position (helper function)
 function getWordAt(paragraphIdx, lineIdx, wordIdx) {

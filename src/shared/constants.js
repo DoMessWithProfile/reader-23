@@ -1,6 +1,6 @@
 // WPM (Words Per Minute) Configuration
 const WPM_CONFIG = {
-  DEFAULT: 300,
+  DEFAULT: 250,
   MIN: 100,
   MAX: 600
 };
