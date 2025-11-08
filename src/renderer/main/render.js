@@ -198,7 +198,7 @@ function stopReading() {
   }
 }
 
-// Restart reading with new WPM (called when WPM changes during playback)
+// Restart reading with new WPM
 function restartReading() {
   if (!isPlaying) return;
 
@@ -246,6 +246,33 @@ function nextLine() {
     currentParagraphIndex = ocrData.paragraphs.length - 1; // Stay at last paragraph
     return;
   }
+
+  // Display first word of next paragraph with context
+  const currentWord = getCurrentWord();
+  const prevWord = getPreviousWord();
+  const nextWord = getNextWord();
+
+  if (currentWord) {
+    displayWord(currentWord, prevWord, nextWord);
+  }
+}
+// Move to prev line or paragraph
+function prevLine() {
+  stopReading();
+
+  if (!ocrData || !ocrData.paragraphs.length) return;
+
+  // Check if we've reached end of all paragraphs
+  if (currentParagraphIndex == 0) {
+    updateDisplayStatus('No more paragraphs. Before this', 'success');
+    currentParagraphIndex = ocrData.paragraphs.length - 1; // Stay at last paragraph
+    return;
+  }
+
+  // Move to next paragraph
+  currentParagraphIndex--;
+  currentLineIndex = 0;
+  currentWordIndex = 0;
 
   // Display first word of next paragraph with context
   const currentWord = getCurrentWord();

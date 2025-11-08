@@ -12,6 +12,35 @@ let selectionState = {
   coordinates: null
 };
 
+// function handleRefreshOCR() {
+//   const mainWindow = getMainWindow();
+//   if (!selectionState.isSelected || !selectionState.coordinates) {
+//     console.error('No selection to refresh');
+//     mainWindow.webContents.send(IPC_CHANNELS.OCR_ERROR, 'No selection to refresh');
+//     return;
+//   }
+//   // Re-run OCR with existing coordinates
+
+//   // Ensure border window stays on top
+//   mainWindow.setAlwaysOnTop(true, 'floating');
+
+//   // Notify main window that selection is stored
+//   mainWindow.webContents.send(IPC_CHANNELS.SELECTION_STORED, coordinates);
+
+//   // Start OCR processing automatically
+//   try {
+//     const screenshot = await captureSelectedArea(coordinates, mainWindow);
+//     const ocrResult = await processOCR(screenshot, coordinates, mainWindow);
+
+//     // Send OCR result to renderer
+//     mainWindow.webContents.send(IPC_CHANNELS.OCR_COMPLETE, ocrResult);
+//     console.log('OCR result sent to renderer');
+//   } catch (error) {
+//     console.error('Error in OCR pipeline:', error);
+//     mainWindow.webContents.send(IPC_CHANNELS.OCR_ERROR, error.message);
+//   }
+// }
+
 function registerIPCHandlers() {
   // Handle start selection request
   ipcMain.on(IPC_CHANNELS.START_SELECTION, () => {
@@ -112,6 +141,7 @@ function registerIPCHandlers() {
       mainWindow.webContents.send(IPC_CHANNELS.OCR_ERROR, error.message);
     }
   });
+
   // minimize window
   ipcMain.on('window-minimize', () => {
     console.log('[Main] Minimize window requested');

@@ -1,11 +1,11 @@
 // Get button references
-
 const playPauseButton = document.getElementById('play-pause-button');
 const playPauseIcon = document.getElementById('play-pause-icon');
 
 const selectButton = document.getElementById('select-button');
-const replayButton = document.getElementById('replay-button');
+const refreshButton = document.getElementById('refresh-button');
 const nextButton = document.getElementById('next-button');
+const prevButton = document.getElementById('prev-button');
 
 // Get WPM control references
 const wpmSlider = document.getElementById('wpm-slider');
@@ -55,6 +55,26 @@ function initializeControls() {
     }
 
     nextLine();
+  });
+
+  // Handle Prev button
+  nextButton.addEventListener('click', () => {
+    console.log('Prev button clicked');
+    if (!ocrData) {
+      updateDisplayStatus('Please select an area first', 'error');
+      return;
+    }
+    prevLine();
+  });
+
+  // Handle Replay button
+  refreshButton.addEventListener('click', () => {
+    console.log('refresh button clicked');
+    if (!ocrData) {
+      updateDisplayStatus('Please select an area first', 'error');
+      return;
+    }
+    window.electronAPI.refreshOCR();
   });
 
   // Handle WPM slider change
