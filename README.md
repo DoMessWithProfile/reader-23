@@ -10,13 +10,11 @@ reader-23
 Description
 -----
 
-reader-23 is an application which aims to address the challenge of visual tracking in traditional paragraph and text formatting to assist users in reading and comprehension. It is built on the scientific research method called Rapid serial visual presentation (RSVP) which involves presenting a series of visual stimuli, such as words or images, one after another in quick succession at the same location.
+reader-23 is an application which aims to address the challenge of visual tracking in traditional paragraph and text formatting to assist users in reading and comprehension. It is built on the scientific research method called Rapid serial visual presentation (RSVP) which involves presenting a series of visual stimuli, such as words or images, one after another in quick succession at the same location. This approach to present visual stimuli should improve the users ability to focus and heighten their ability to consume content
 
-Building upon an existing prototype, the app will iterating through each word in a sentence, displaying them sequentially at a centralised position, increasing the users ability to read words quickly.
+Building upon an existing prototype, the app will iterate through words in a sentence and pargraph, displaying them sequentially at a centralised position, increasing the users ability to read words quickly. This app is not meant to replace reading entirely, the intention of this application is to be used along side traditional reading as a floating helper.
 
-Some integrated features include an adjustable words per minute pace (WPM), visual tracking of words through sentence highlighting, and sentence tracking/navigating through a paragraph while reading similarly to video scrubbing.
-
-This app aims to assist users who typically have trouble keeping track of where they are up to when reading traditional paragraphs. This application can also help readers who want to consume text based content more quickly an efficiently. This approach reduces cognitive load and eye strain, making digital content more accessible for users with reading difficulties, dyslexia, ADHD, or visual processing challenges. 
+This app aims to assist users who typically have trouble keeping track of where they are up to when reading traditional paragraphs. This application can also help readers who want to consume text based content more quickly and efficiently. This approach reduces cognitive load and eye strain, making digital content more accessible for users with reading difficulties, dyslexia, ADHD, or visual processing challenges. 
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/aa59ee7b-593c-4250-8091-f1f0f222c017" width="600" controls autoplay loop muted playsinline></video>
