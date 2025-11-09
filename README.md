@@ -2,8 +2,8 @@ read-23
 -----
 
 *Team: [Jaden Khuu]*
-*Status: Draft*
-*Last Updated: 22/10/2025*
+*Status: Prototype v1.0*
+*Last Updated: 09/11/2025*
 
 Description
 -----
