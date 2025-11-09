@@ -99,3 +99,5 @@ Software Architecture
 -----
 
 This application is built using Electron to make use of its desktop application capabilities. It also utilises system level APIs for screen capturing and OCR processing (for non-plaintext inputs). This tech stack allows for lightweight architecture, prioritising speed and efficient development of future features.
+
+The pixelated graphic aesthetic was designed by me and drawn using Aseprite art software
