@@ -18,7 +18,7 @@ This app aims to assist users who typically have trouble keeping track of where 
 
 <p align="center">
   <img width="526" height="786" alt="Whole App" src="https://github.com/user-attachments/assets/81dc247e-cdff-457b-a61f-0800a06f21b3" />
-  <img src="https://i.imgur.com/6N2ag8Z.gif" width="526" height="786" alt="Demo Animation">
+  <img src="https://i.imgur.com/6N2ag8Z.gif" width="526" height="786" alt="Demo Animation" />
 </p>
 
 ### How to use
