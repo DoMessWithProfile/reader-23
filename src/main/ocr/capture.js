@@ -72,9 +72,9 @@ async function captureSelectedArea(coordinates, mainWindow) {
     console.log('Image buffer size:', imageBuffer.length, 'bytes');
 
     // DEBUG: Save cropped image to file for inspection
-    const debugPath = path.join(__dirname, '../../debug-screenshot.png');
-    fs.writeFileSync(debugPath, imageBuffer);
-    console.log('Debug screenshot saved to:', debugPath);
+    // const debugPath = path.join(__dirname, '../../debug-screenshot.png');
+    // fs.writeFileSync(debugPath, imageBuffer);
+    // console.log('Debug screenshot saved to:', debugPath);
 
     return imageBuffer;
   } catch (error) {

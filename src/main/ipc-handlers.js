@@ -130,6 +130,15 @@ function registerIPCHandlers() {
     const mainWindow = getMainWindow();
     if (mainWindow) {
       mainWindow.close();
+      // Clear stored coordinates
+      selectionState.isSelected = false;
+      selectionState.coordinates = null;
+
+      // Clear OCR data
+      resetOcrData();
+
+      // Close border window
+      closeBorderWindow();
       console.log('[Main] Window closed');
     } else {
       console.error('[Main] Main window not found');

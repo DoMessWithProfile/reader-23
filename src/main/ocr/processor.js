@@ -275,11 +275,11 @@ async function processOCR(imageBuffer, coordinates, mainWindow) {
     ocrData.isProcessing = false;
 
     // Save to JSON file for debugging
-    fs.writeFileSync(
-      path.join(__dirname, '../../ocr-output.json'),
-      JSON.stringify(structuredData, null, 2)
-    );
-    console.log('OCR data saved to ocr-output.json');
+    // fs.writeFileSync(
+    //   path.join(__dirname, '../../ocr-output.json'),
+    //   JSON.stringify(structuredData, null, 2)
+    // );
+    // console.log('OCR data saved to ocr-output.json');
 
     return structuredData;
   } catch (error) {
