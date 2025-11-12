@@ -46,8 +46,8 @@ function prefixWordsFilter(word) {
   const text = word.text.trim();
   const firstChar = text[0];
   return firstChar === '(' ||
-         firstChar === '“' ||
-         firstChar === "'" ||
+        //  firstChar === '“' ||
+        //  firstChar === "'" ||
          firstChar === '’';
 }
 
