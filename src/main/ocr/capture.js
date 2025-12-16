@@ -48,24 +48,46 @@ async function captureSelectedArea(coordinates, mainWindow) {
     console.log('Crop area:', cropArea);
 
     // Crop the screenshot
-    const croppedImage = screenshot.crop(cropArea);
+    // const croppedImage = screenshot.crop(cropArea);
 
-    // Resize if too large (optimization for OCR)
-    const maxDimension = OCR_CONFIG.MAX_IMAGE_DIMENSION;
-    let finalImage = croppedImage;
-    if (croppedImage.getSize().width > maxDimension || croppedImage.getSize().height > maxDimension) {
-      const aspectRatio = croppedImage.getSize().width / croppedImage.getSize().height;
-      const newWidth = aspectRatio > 1 ? maxDimension : Math.round(maxDimension * aspectRatio);
-      const newHeight = aspectRatio > 1 ? Math.round(maxDimension / aspectRatio) : maxDimension;
+    // // Resize if too large (optimization for OCR)
+    // const maxDimension = OCR_CONFIG.MAX_IMAGE_DIMENSION;
+    // let finalImage = croppedImage;
+    // if (croppedImage.getSize().width > maxDimension || croppedImage.getSize().height > maxDimension) {
+    //   const aspectRatio = croppedImage.getSize().width / croppedImage.getSize().height;
+    //   const newWidth = aspectRatio > 1 ? maxDimension : Math.round(maxDimension * aspectRatio);
+    //   const newHeight = aspectRatio > 1 ? Math.round(maxDimension / aspectRatio) : maxDimension;
 
-      finalImage = croppedImage.resize({
-        width: newWidth,
-        height: newHeight,
-        quality: 'good'
-      });
-      console.log('Resized to:', finalImage.getSize());
-    }
+    //   finalImage = croppedImage.resize({
+    //     width: newWidth,
+    //     height: newHeight,
+    //     quality: 'good'
+    //   });
+    //   console.log('Resized to:', finalImage.getSize());
+    // }
 
+    // // Crop the screenshot
+    // const croppedImage = screenshot.crop(cropArea);
+
+    // // Resize if too large (optimization for OCR)
+    // const maxDimension = OCR_CONFIG.MAX_IMAGE_DIMENSION;
+    // let finalImage = croppedImage;
+    // const currentSize = croppedImage.getSize();
+
+    // // Check if dimensions exceed the maximum
+    // if (currentSize.width > maxDimension || currentSize.height > maxDimension) {
+    //   console.log('Image too large, halving dimensions...');
+      
+    //   // Simply half the dimensions instead of capping at maxDimension
+    //   finalImage = croppedImage.resize({
+    //     width: Math.round(currentSize.width * 0.75),
+    //     height: Math.round(currentSize.height * 0.75),
+    //     quality: 'good'
+    //   });
+    //   console.log('Resized to:', finalImage.getSize());
+    // }
+
+    const finalImage = screenshot.crop(cropArea);
     // Convert to PNG buffer
     const imageBuffer = finalImage.toPNG();
 
