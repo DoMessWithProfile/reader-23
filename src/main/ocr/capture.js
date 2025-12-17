@@ -34,7 +34,7 @@ async function captureSelectedArea(coordinates, mainWindow) {
     const source = sources[0];
     const screenshot = source.thumbnail;
 
-    console.log('Screenshot size:', screenshot.getSize());
+    // console.log('Screenshot size:', screenshot.getSize());
 
     // Crop to selected area
     // Adjust coordinates for scale factor
@@ -46,34 +46,7 @@ async function captureSelectedArea(coordinates, mainWindow) {
     };
 
     console.log('Crop area:', cropArea);
-
-    // Crop the screenshot
-    // const croppedImage = screenshot.crop(cropArea);
-
-    // // Resize if too large (optimization for OCR)
-    // const maxDimension = OCR_CONFIG.MAX_IMAGE_DIMENSION;
-    // let finalImage = croppedImage;
-    // if (croppedImage.getSize().width > maxDimension || croppedImage.getSize().height > maxDimension) {
-    //   const aspectRatio = croppedImage.getSize().width / croppedImage.getSize().height;
-    //   const newWidth = aspectRatio > 1 ? maxDimension : Math.round(maxDimension * aspectRatio);
-    //   const newHeight = aspectRatio > 1 ? Math.round(maxDimension / aspectRatio) : maxDimension;
-
-    //   finalImage = croppedImage.resize({
-    //     width: newWidth,
-    //     height: newHeight,
-    //     quality: 'good'
-    //   });
-    //   console.log('Resized to:', finalImage.getSize());
-    // }
-
-    // // Crop the screenshot
-    // const croppedImage = screenshot.crop(cropArea);
-
-    // // Resize if too large (optimization for OCR)
-    // const maxDimension = OCR_CONFIG.MAX_IMAGE_DIMENSION;
-    // let finalImage = croppedImage;
-    // const currentSize = croppedImage.getSize();
-
+    
     // // Check if dimensions exceed the maximum
     // if (currentSize.width > maxDimension || currentSize.height > maxDimension) {
     //   console.log('Image too large, halving dimensions...');

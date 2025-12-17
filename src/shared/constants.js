@@ -12,6 +12,8 @@ const IPC_CHANNELS = {
   CLEAR_SELECTION: 'clear-selection',
   REFRESH_OCR: 'refresh-ocr',
 
+  UPDATE_HIGHLIGHT: 'update-highlight',
+
   // Overlay window to main process
   SELECTION_COMPLETE: 'selection-complete',
   SELECTION_CANCELLED: 'selection-cancelled',
