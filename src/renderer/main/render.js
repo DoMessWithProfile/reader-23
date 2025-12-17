@@ -100,8 +100,8 @@ function updateLineHighlight() {
   const relativeBox = {
     x: line.bbox.x - selectionCoordinates.x,
     y: line.bbox.y - selectionCoordinates.y,
-    width: line.bbox.width * 3,
-    height: line.bbox.height * 5
+    width: line.bbox.width,
+    height: line.bbox.height
   };
 
   // Send to main process -> border window

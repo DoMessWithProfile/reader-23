@@ -5,9 +5,22 @@ const ctx = canvas.getContext('2d');
 const highlight = document.getElementById('highlight-canvas');
 const hctx = highlight.getContext('2d');
 
-// Set canvas size to window size
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// Function to update dimensions for BOTH canvases
+function updateCanvasDimensions() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  // Resize border canvas
+  canvas.width = width;
+  canvas.height = height;
+
+  // Resize highlight canvas (This was missing)
+  highlight.width = width;
+  highlight.height = height;
+}
+
+// Initial set up
+updateCanvasDimensions();
 
 // Draw green border
 function drawBorder() {
