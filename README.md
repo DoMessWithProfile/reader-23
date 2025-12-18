@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/2ee692af-dec7-4005-97ea-9a4a7ed50a28
 reader-23
 -----
 
@@ -12,11 +10,13 @@ reader-23
 Description
 -----
 
-reader-23 is an application which aims to address the challenge of visual tracking in traditional paragraph and text formatting to assist users in reading and comprehension. It is built on the scientific research method called Rapid serial visual presentation (RSVP) which involves presenting a series of visual stimuli, such as words or images, one after another in quick succession at the same location. This approach to present visual stimuli should improve the users ability to focus and heighten their ability to consume content.
+reader-23 is an application which aims to address the challenge of visual tracking in traditional paragraph and text formatting to assist users in reading and comprehension. It is built on the scientific research method called Rapid serial visual presentation (RSVP) which involves presenting a series of visual stimuli, such as words or images, one after another in quick succession at the same location. This approach to present visual stimuli should improve the users ability to focus and heighten their ability to consume text-based content.
 
-Building upon an existing prototype, the app will iterate through words in a sentence and paragraph, displaying them sequentially at a centralised position, increasing the users ability to read words quickly. This app is not meant to replace reading entirely, the intention of this application is to be used along side traditional reading as a floating helper.
+The application is intended to be used as a floating helper, sitting beside the users main display of text. reader-23 will iterate through words in paragraph, displaying them sequentially at a centralised position, increasing the users ability to read words quickly. This app is not meant to replace reading entirely, the intention of this application is to be used along side traditional reading as a tool to assist readers who may get lost following traditional line reading. As such, a line highlight will also follow the selected text, keeping track of where the user is up to for reading, allowing them to refer back to the original medium should they need to. 
 
-<div align="center">https://github.com/user-attachments/assets/8582d018-3bbd-4b21-bfbb-eb9c6c71fc3f</div>
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/8582d018-3bbd-4b21-bfbb-eb9c6c71fc3f" width="600" controls autoplay loop muted playsinline></video>
+</div>
 
 This app aims to assist users who typically have trouble keeping track of their reading progress with traditional formatted paragraphs. This app can also help readers who want to consume text-based content more quickly and efficiently. This approach reduces cognitive load and eye strain, making digital content more accessible for users who may have reading difficulties, dyslexia, ADHD, or visual processing challenges. 
 
