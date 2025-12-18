@@ -25,7 +25,10 @@ Installation
 
 1. Navigate to the release page on the right side of the GitHub repo.
 2. Download the setup.exe of the latest version.
-3. Run the application.
+3. Run the setup.exe to install the app as a program on your machine.
+4. reader-23 will launch after set up
+5. reader-23 will also become a program on your machine which you can uninstall from 'Add and remove programs' (Windows)
+6. The app can be found by searching an app in the search bar (Windows)
 
 How to use
 -----
@@ -47,6 +50,12 @@ First, familiarise yourself with the control buttons section locate at the lower
 - **Bottom button** is **'refresh'** to refresh the scan of an existing screen selection.
   - The main use of this is to streamline the user experience
   - Eg. suppose the user is reading a page of a PDF and they have made a selection on screen. They scroll down to the next page to continue reading. Instead of reselecting the exact same area, the user can recycle the existing selection and click refresh to scan for new text.
+
+Troubleshooting
+-----
+
+In order for the line highlighting to be accurate, ensure your 'Scale' in display settings is the default 100%
+- If the text highlighting does not align with the text or follow the lines properly, that is likely why
 
 ### Typical user flow
 1. Click the 'select screen' button to select an area of the current screen to scan for text.
