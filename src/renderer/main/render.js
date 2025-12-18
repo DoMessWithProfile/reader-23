@@ -316,9 +316,7 @@ function restartReading() {
         if (currentWord) {
           displayWord(currentWord, prevWord, nextWord);
         }
-        updateLineHighlight();
-
-        scheduleNextWord(); // Recursively schedule the next word
+        scheduleNextWord();
       }
     }, delay);
   }
@@ -333,6 +331,7 @@ function resetReading() {
   currentParagraphIndex = 0;
   currentLineIndex = 0;
   currentWordIndex = 0;
+  updateLineHighlight();
 }
 // Move to next line or paragraph
 function nextLine() {
