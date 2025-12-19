@@ -59,7 +59,9 @@ Troubleshooting
 In order for the line highlighting to be accurate, ensure your 'Scale' in display settings is the default 100%
 - If the text highlighting does not align with the text or follow the lines properly, that is likely why
 
-### Typical user flow
+Typical user flow
+-----
+
 1. Click the 'select screen' button to select an area of the current screen to scan for text.
 2. Once the screen is scanned, WPM (words per minute) is adjustable to the users reading pace.
 3. Upon successful scanning, the display area will show the first word and the next word in the sequence
@@ -106,9 +108,11 @@ The **left and right buttons** will navigate back and forth between paragraphs r
 The **bottom button** is the 'refresh button' which only operates if the user has an existing selection on the screen. The refresh button will rescan the selected area for text. This is useful if the user selects a part of the screen like a standard page size, finishes reading the page, and scrolls to the next page. They can press refresh to rescan for new text without having to remake the same selection
 
 
-Software Architecture
+Software Architecture and Notes
 -----
 
 This application is built using Electron to make use of its desktop application capabilities. It also utilises system level APIs for screen capturing and OCR processing (for non-plaintext inputs). This tech stack allows for lightweight architecture, prioritising speed and efficient development of future features.
 
 The pixelated graphic aesthetic was designed by me and drawn using Aseprite art software
+
+Claude Code was utilised in the early stage of development to refactor and organise the codebase into a neat file structure
