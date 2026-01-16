@@ -1,0 +1,360 @@
+
+/* ===========================
+DEBUG STYLES
+===============================*/
+/* .word-context-container {
+  background-color: rgba(255, 0, 0, 0.3) !important;
+  border: 2px solid red !important;
+} */
+/* .control-btn {
+  background-color: rgba(255, 0, 0, 0.3) !important;
+  border: 2px solid red !important;
+} */
+
+/* .center-btn {
+  background-color: rgba(0, 255, 0, 0.3) !important;
+  border: 2px solid green !important;
+} */
+
+/* #wpm-control {
+  background-color: rgba(0, 0, 255, 0.3) !important;
+  border: 2px solid blue !important;
+}
+
+#wpm-slider {
+  background-color: rgba(0, 0, 255, 0.3) !important;
+  border: 2px solid blue !important;
+}
+
+#wpm-input {
+  background-color: rgba(0, 0, 255, 0.3) !important;
+  border: 2px solid blue !important;
+} */
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 416px;
+  height: 680px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; */
+  font-family: 'Press Start 2P', monospace;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ============================================
+   PIXEL ART RENDERING
+   ============================================ */
+
+.pixel-art,
+img {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+/* ============================================
+   APP CONTAINER
+   ============================================ */
+
+#app-container {
+  position: relative;
+  width: 416px;
+  height: 680px;
+}
+
+/* Static background image */
+#background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 416px;
+  height: 680px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   TITLEBAR
+   ============================================ */
+#app-title {
+  position: absolute;
+  padding: 11px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  z-index: 11;
+}
+
+#custom-titlebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 416px;
+  height: 30px;
+  -webkit-app-region: drag;
+  z-index: 10;
+}
+
+.window-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-btn {
+  width: 41px;
+  height: 33px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+#pin-btn-disabled {
+  display: none;
+}
+
+/* ============================================
+   DISPLAY AREA
+   ============================================ */
+
+#display-area {
+  position: absolute;
+  top: 52px;
+  left: 28px;
+  width: 360px;
+  height: 236px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+#display-text {
+  text-align: center;
+  color: #000;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#display-text.word-display {
+  font-size: 23px;
+  font-weight: lighter;
+}
+
+.word-context-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 368px;
+}
+
+.word-previous,
+.word-next {
+  font-size: 10px;
+  opacity: 0.25;
+}
+
+.word-current {
+  font-size: 23px;
+}
+
+#start-title {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* ============================================
+   WPM SLIDER (with custom pixel art handle)
+   ============================================ */
+
+#wpm-control {
+  position: absolute;
+  top: 308px;
+  left: 24px;
+  width: 380px;
+  /* height: 56px; */
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: right; */
+}
+
+/* Custom styled range slider */
+#wpm-slider {
+  flex: 1;
+  height: 6px;
+  width: 368px;
+  background: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+/* WebKit (Chrome, Safari, Edge) - Custom Thumb */
+#wpm-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 24px;
+  background-image: url('assets/slider_btn.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  /* Remove default styling */
+  border: none;
+  border-radius: 0;
+}
+/* Remove default track styling */
+#wpm-slider::-webkit-slider-runnable-track {
+  background: transparent;
+  border: none;
+}
+#wpm-slider::-moz-range-track {
+  background: transparent;
+  border: none;
+}
+
+/* WPM Number Input */
+#wpm-input {
+  width: 52px;
+  height: 28px;
+  padding: 0;
+  border: 0px solid #999;
+  margin: 8px 0 0 4px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  background-color: #d1dfe7;
+  border-radius: 0;
+
+  font-family: 'Press Start 2P', monospace; /* ← Add this */
+  letter-spacing: 1px; /* ← Optional: better spacing */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#wpm-input:focus {
+  outline: none;
+  border-color: #0078d4;
+}
+
+/* ============================================
+   CONTROL BUTTONS (Static overlays)
+   ============================================ */
+
+.control-btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  padding: 0;
+  pointer-events: auto;
+}
+
+/* Select button (dark square above screen) */
+.square-btn {
+  top: 348px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 84px;
+}
+
+/* iPod wheel buttons */
+.left-btn {
+  /* Double arrow left - previous */
+  top: 458px;
+  left: 56px;
+  width: 84px;
+  height: 84px;
+}
+
+.right-btn {
+  /* Double arrow right - next */
+  top: 458px;
+  right: 56px;
+  width: 84px;
+  height: 84px;
+}
+
+.bottom-btn {
+  /* Circular arrow - refresh */
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 84px;
+}
+
+/* ============================================
+   DYNAMIC PLAY/PAUSE BUTTON
+   ============================================ */
+
+.center-btn {
+  /* Center of iPod wheel */
+  top: 458px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 84px;
+
+  /* Container for the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* The actual play/pause icon image */
+#play-pause-icon {
+  width:48px;
+  height: 56px;
+  display: block;
+  pointer-events: none;
+  /* Clicks go to button, not image */
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
